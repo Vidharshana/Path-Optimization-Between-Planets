@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 # generate positions and thrusts
 init_pos = np.array([0,0])
 end_pos = np.array([1,0])
-planet_positions = [[1,0], [0.5, 0.9], [0.7, -0.5]]
+#planet_positions = [[1,0], [0.5, 0.9], [0.7, -0.5]]
 #planet_piositions = [[1,0], [0.5, 0.5], [0.5, -0.5]]
 #planet_positions = [[1,0], [0.5, 0.5]]
 #planet_positions = [[1, 0], [2, 0], [3, 0]]
 #planet_masses = [3, 2, 1]
-#planet_positions = [[1,0]]
-planet_masses = [1, 1, 1]
+planet_positions = [[1,0]]
+planet_masses = [1]
 
 # get thrusts in polar coordinates
 def get_thrusts(angle_range, mag_range):
@@ -88,4 +88,4 @@ for i in range(10):
     new_magnitude_range = [top_traj[1] - (2.5/(2**i)),top_traj[1] + (2.5/(2**i))]
     thrusts = get_thrusts(new_angle_range, new_magnitude_range)
     
-plt.savefig("orbits-1/orbit_subplot.png")
+plt.savefig("orbits-test-case/orbit_subplot.png")
